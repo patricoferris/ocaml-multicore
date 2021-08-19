@@ -36,7 +36,7 @@ FLEXDLL_SUBMODULE_PRESENT =
 endif
 
 # Use boot/ocamlc.opt if available
-CAMLRUN ?= $(ROOTDIR)/boot/ocamlrun$(EXE)
+CAMLRUN ?= ocamlrun$(EXE)
 ifeq (0,$(shell \
   test $(ROOTDIR)/boot/ocamlc.opt -nt $(ROOTDIR)/boot/ocamlc; \
   echo $$?))

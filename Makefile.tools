@@ -100,7 +100,7 @@ OCAMLMKLIB=$(FLEXLINK_PREFIX)$(OCAMLRUN) $(OTOPDIR)/tools/ocamlmklib$(EXE) \
                     $(OTOPDIR)/ocamlc$(EXE) $(OCFLAGS) $(RUNTIME_VARIANT)" \
            -ocamlopt "$(OTOPDIR)/runtime/ocamlrun$(USE_RUNTIME)$(EXE) \
                       $(OTOPDIR)/ocamlopt$(EXE) $(OCFLAGS) $(RUNTIME_VARIANT)"
-OCAMLYACC=$(TOPDIR)/yacc/ocamlyacc$(EXE)
+OCAMLYACC=ocamlyacc$(EXE)
 DUMPOBJ=$(OCAMLRUN) $(OTOPDIR)/tools/dumpobj$(EXE)
 OBJINFO=$(OCAMLRUN) $(OTOPDIR)/tools/ocamlobjinfo$(EXE)
 

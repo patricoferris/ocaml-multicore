@@ -209,7 +209,7 @@ opt: checknative
 # Native-code versions of the tools
 .PHONY: opt.opt
 opt.opt: checknative
-	$(MAKE) checkstack
+	# $(MAKE) checkstack
 	$(MAKE) runtime
 	$(MAKE) core
 	$(MAKE) ocaml
@@ -1019,7 +1019,7 @@ toplevel/opttoploop.cmx: otherlibs/dynlink/dynlink.cmxa
 make_opcodes := tools/make_opcodes$(EXE)
 
 bytecomp/opcodes.ml: runtime/caml/instruct.h $(make_opcodes)
-	runtime/ocamlrun$(EXE) $(make_opcodes) -opcodes < $< > $@
+	ocamlrun$(EXE) $(make_opcodes) -opcodes < $< > $@
 
 bytecomp/opcodes.mli: bytecomp/opcodes.ml
 	$(CAMLC) -i $< > $@
